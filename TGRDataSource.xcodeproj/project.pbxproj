@@ -17,6 +17,7 @@
 		990C568719017CB400E382F1 /* TGRDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C568619017CB400E382F1 /* TGRDataSource.m */; };
 		990C568A19017DAD00E382F1 /* NSObject+Abstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C568919017DAD00E382F1 /* NSObject+Abstract.m */; };
 		990C568D19017EBA00E382F1 /* TGRArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C568C19017EBA00E382F1 /* TGRArrayDataSource.m */; };
+		993DB7E71901990000653166 /* TGRFetchedResultsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 993DB7E61901990000653166 /* TGRFetchedResultsDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		990C568919017DAD00E382F1 /* NSObject+Abstract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Abstract.m"; sourceTree = "<group>"; };
 		990C568B19017EBA00E382F1 /* TGRArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRArrayDataSource.h; sourceTree = "<group>"; };
 		990C568C19017EBA00E382F1 /* TGRArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRArrayDataSource.m; sourceTree = "<group>"; };
+		993DB7E51901990000653166 /* TGRFetchedResultsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRFetchedResultsDataSource.h; sourceTree = "<group>"; };
+		993DB7E61901990000653166 /* TGRFetchedResultsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRFetchedResultsDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				990C568619017CB400E382F1 /* TGRDataSource.m */,
 				990C568B19017EBA00E382F1 /* TGRArrayDataSource.h */,
 				990C568C19017EBA00E382F1 /* TGRArrayDataSource.m */,
+				993DB7E51901990000653166 /* TGRFetchedResultsDataSource.h */,
+				993DB7E61901990000653166 /* TGRFetchedResultsDataSource.m */,
 			);
 			path = TGRDataSource;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				990C568719017CB400E382F1 /* TGRDataSource.m in Sources */,
+				993DB7E71901990000653166 /* TGRFetchedResultsDataSource.m in Sources */,
 				990C568A19017DAD00E382F1 /* NSObject+Abstract.m in Sources */,
 				990C568D19017EBA00E382F1 /* TGRArrayDataSource.m in Sources */,
 			);
@@ -416,6 +422,7 @@
 				990C568119017A3400E382F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		990C568219017A3400E382F1 /* Build configuration list for PBXNativeTarget "TGRDataSourceTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				990C568419017A3400E382F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
