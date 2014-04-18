@@ -1,5 +1,5 @@
-// TGRDataSource.h
-// 
+// NSObject+Abstract.h
+//
 // Copyright (c) 2014 Guillermo Gonzalez
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -8,10 +8,10 @@
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -20,35 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-typedef void (^TGRDataSourceCellBlock)(id cell, id item);
-
-/**
- Convenience class to encapsulate an `UITableView` or `UICollectionView` data source. 
- Inspired by http://www.objc.io/issue-1/lighter-view-controllers.html
- */
-@interface TGRDataSource : NSObject <UITableViewDataSource, UICollectionViewDataSource>
+@interface NSObject (Abstract)
 
 /**
- Initializes the data source.
- 
- @param reuseIdentifier The cell reuse identifier.
- @param configureCellBlock A block that will be called when the view asks for a cell in a particular location.
- 
- @return An initialized data source.
+ Message sent when an implementation wants to explicitly require a subclass to implement a method.
+ Blatantly copied from NSObject+GNUstepBase.
  */
-- (id)initWithCellReuseIdentifier:(NSString *)reuseIdentifier
-               configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock;
-
-/**
- Returns a data source item in a particular location.
- */
-- (id)itemAtIndexPath:(NSIndexPath *)indexPath;
-
-/**
- Returns the location for the specified data source item.
- */
-- (NSIndexPath *)indexPathForItem:(id)item;
+- (id)subclassResponsibility:(SEL)aSel;
 
 @end

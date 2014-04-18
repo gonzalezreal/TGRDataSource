@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		990C566019017A3400E382F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990C565F19017A3400E382F1 /* Foundation.framework */; };
-		990C566519017A3400E382F1 /* TGRDataSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 990C566419017A3400E382F1 /* TGRDataSource.h */; };
-		990C566719017A3400E382F1 /* TGRDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C566619017A3400E382F1 /* TGRDataSource.m */; };
 		990C566E19017A3400E382F1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990C566D19017A3400E382F1 /* XCTest.framework */; };
 		990C566F19017A3400E382F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990C565F19017A3400E382F1 /* Foundation.framework */; };
 		990C567119017A3400E382F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990C567019017A3400E382F1 /* UIKit.framework */; };
 		990C567419017A3400E382F1 /* libTGRDataSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 990C565C19017A3400E382F1 /* libTGRDataSource.a */; };
 		990C567A19017A3400E382F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 990C567819017A3400E382F1 /* InfoPlist.strings */; };
 		990C567C19017A3400E382F1 /* TGRDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C567B19017A3400E382F1 /* TGRDataSourceTests.m */; };
+		990C568719017CB400E382F1 /* TGRDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C568619017CB400E382F1 /* TGRDataSource.m */; };
+		990C568A19017DAD00E382F1 /* NSObject+Abstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C568919017DAD00E382F1 /* NSObject+Abstract.m */; };
+		990C568D19017EBA00E382F1 /* TGRArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C568C19017EBA00E382F1 /* TGRArrayDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				990C566519017A3400E382F1 /* TGRDataSource.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,14 +45,18 @@
 		990C565C19017A3400E382F1 /* libTGRDataSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTGRDataSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		990C565F19017A3400E382F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		990C566319017A3400E382F1 /* TGRDataSource-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TGRDataSource-Prefix.pch"; sourceTree = "<group>"; };
-		990C566419017A3400E382F1 /* TGRDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGRDataSource.h; sourceTree = "<group>"; };
-		990C566619017A3400E382F1 /* TGRDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGRDataSource.m; sourceTree = "<group>"; };
 		990C566C19017A3400E382F1 /* TGRDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TGRDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		990C566D19017A3400E382F1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		990C567019017A3400E382F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		990C567719017A3400E382F1 /* TGRDataSourceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TGRDataSourceTests-Info.plist"; sourceTree = "<group>"; };
 		990C567919017A3400E382F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		990C567B19017A3400E382F1 /* TGRDataSourceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGRDataSourceTests.m; sourceTree = "<group>"; };
+		990C568519017CB400E382F1 /* TGRDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRDataSource.h; sourceTree = "<group>"; };
+		990C568619017CB400E382F1 /* TGRDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRDataSource.m; sourceTree = "<group>"; };
+		990C568819017DAD00E382F1 /* NSObject+Abstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Abstract.h"; sourceTree = "<group>"; };
+		990C568919017DAD00E382F1 /* NSObject+Abstract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Abstract.m"; sourceTree = "<group>"; };
+		990C568B19017EBA00E382F1 /* TGRArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRArrayDataSource.h; sourceTree = "<group>"; };
+		990C568C19017EBA00E382F1 /* TGRArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRArrayDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,9 +114,13 @@
 		990C566119017A3400E382F1 /* TGRDataSource */ = {
 			isa = PBXGroup;
 			children = (
-				990C566419017A3400E382F1 /* TGRDataSource.h */,
-				990C566619017A3400E382F1 /* TGRDataSource.m */,
 				990C566219017A3400E382F1 /* Supporting Files */,
+				990C568819017DAD00E382F1 /* NSObject+Abstract.h */,
+				990C568919017DAD00E382F1 /* NSObject+Abstract.m */,
+				990C568519017CB400E382F1 /* TGRDataSource.h */,
+				990C568619017CB400E382F1 /* TGRDataSource.m */,
+				990C568B19017EBA00E382F1 /* TGRArrayDataSource.h */,
+				990C568C19017EBA00E382F1 /* TGRArrayDataSource.m */,
 			);
 			path = TGRDataSource;
 			sourceTree = "<group>";
@@ -187,6 +195,7 @@
 		990C565419017A3400E382F1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TGR;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Guillermo Gonzalez";
 			};
@@ -224,7 +233,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				990C566719017A3400E382F1 /* TGRDataSource.m in Sources */,
+				990C568719017CB400E382F1 /* TGRDataSource.m in Sources */,
+				990C568A19017DAD00E382F1 /* NSObject+Abstract.m in Sources */,
+				990C568D19017EBA00E382F1 /* TGRArrayDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

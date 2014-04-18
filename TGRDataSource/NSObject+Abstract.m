@@ -1,5 +1,5 @@
-// TGRDataSource.h
-// 
+// NSObject+Abstract.m
+//
 // Copyright (c) 2014 Guillermo Gonzalez
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -8,10 +8,10 @@
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -20,35 +20,19 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import "NSObject+Abstract.h"
+#import <objc/runtime.h>
 
-typedef void (^TGRDataSourceCellBlock)(id cell, id item);
+@implementation NSObject (Abstract)
 
-/**
- Convenience class to encapsulate an `UITableView` or `UICollectionView` data source. 
- Inspired by http://www.objc.io/issue-1/lighter-view-controllers.html
- */
-@interface TGRDataSource : NSObject <UITableViewDataSource, UICollectionViewDataSource>
+- (id)subclassResponsibility:(SEL)aSel {
+    char	c = (class_isMetaClass(object_getClass(self)) ? '+' : '-');
 
-/**
- Initializes the data source.
- 
- @param reuseIdentifier The cell reuse identifier.
- @param configureCellBlock A block that will be called when the view asks for a cell in a particular location.
- 
- @return An initialized data source.
- */
-- (id)initWithCellReuseIdentifier:(NSString *)reuseIdentifier
-               configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock;
-
-/**
- Returns a data source item in a particular location.
- */
-- (id)itemAtIndexPath:(NSIndexPath *)indexPath;
-
-/**
- Returns the location for the specified data source item.
- */
-- (NSIndexPath *)indexPathForItem:(id)item;
+    [NSException raise: NSInvalidArgumentException
+                format: @"[%@%c%@] should be overridden by subclass",
+                        NSStringFromClass([self class]), c,
+                        aSel ? (id)NSStringFromSelector(aSel) : (id)@"(null)"];
+    return self;	// Not reached
+}
 
 @end

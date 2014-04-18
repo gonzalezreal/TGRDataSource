@@ -1,4 +1,4 @@
-// TGRDataSource.h
+// TGRArrayDataSource.h
 // 
 // Copyright (c) 2014 Guillermo Gonzalez
 //
@@ -20,35 +20,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
-
-typedef void (^TGRDataSourceCellBlock)(id cell, id item);
+#import "TGRDataSource.h"
 
 /**
- Convenience class to encapsulate an `UITableView` or `UICollectionView` data source. 
- Inspired by http://www.objc.io/issue-1/lighter-view-controllers.html
+ An array data source for table and collection views.
  */
-@interface TGRDataSource : NSObject <UITableViewDataSource, UICollectionViewDataSource>
+@interface TGRArrayDataSource : TGRDataSource
+
+/**
+ The items managed by this data source.
+ */
+@property (copy, nonatomic, readonly) NSArray *items;
 
 /**
  Initializes the data source.
  
+ @param items The items managed by the data source.
  @param reuseIdentifier The cell reuse identifier.
  @param configureCellBlock A block that will be called when the view asks for a cell in a particular location.
  
  @return An initialized data source.
  */
-- (id)initWithCellReuseIdentifier:(NSString *)reuseIdentifier
-               configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock;
+- (id)initWithItems:(NSArray *)items
+cellReuseIdentifier:(NSString *)reuseIdentifier
+ configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock;
 
-/**
- Returns a data source item in a particular location.
- */
-- (id)itemAtIndexPath:(NSIndexPath *)indexPath;
-
-/**
- Returns the location for the specified data source item.
- */
-- (NSIndexPath *)indexPathForItem:(id)item;
 
 @end
