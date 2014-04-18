@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		990C566019017A3400E382F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990C565F19017A3400E382F1 /* Foundation.framework */; };
+		990C566519017A3400E382F1 /* TGRDataSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 990C566419017A3400E382F1 /* TGRDataSource.h */; };
+		990C566719017A3400E382F1 /* TGRDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C566619017A3400E382F1 /* TGRDataSource.m */; };
+		990C566E19017A3400E382F1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990C566D19017A3400E382F1 /* XCTest.framework */; };
+		990C566F19017A3400E382F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990C565F19017A3400E382F1 /* Foundation.framework */; };
+		990C567119017A3400E382F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990C567019017A3400E382F1 /* UIKit.framework */; };
+		990C567419017A3400E382F1 /* libTGRDataSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 990C565C19017A3400E382F1 /* libTGRDataSource.a */; };
+		990C567A19017A3400E382F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 990C567819017A3400E382F1 /* InfoPlist.strings */; };
+		990C567C19017A3400E382F1 /* TGRDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C567B19017A3400E382F1 /* TGRDataSourceTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		990C567219017A3400E382F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 990C565419017A3400E382F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 990C565B19017A3400E382F1;
+			remoteInfo = TGRDataSource;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		990C565A19017A3400E382F1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				990C566519017A3400E382F1 /* TGRDataSource.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		990C565C19017A3400E382F1 /* libTGRDataSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTGRDataSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		990C565F19017A3400E382F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		990C566319017A3400E382F1 /* TGRDataSource-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TGRDataSource-Prefix.pch"; sourceTree = "<group>"; };
+		990C566419017A3400E382F1 /* TGRDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGRDataSource.h; sourceTree = "<group>"; };
+		990C566619017A3400E382F1 /* TGRDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGRDataSource.m; sourceTree = "<group>"; };
+		990C566C19017A3400E382F1 /* TGRDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TGRDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		990C566D19017A3400E382F1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		990C567019017A3400E382F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		990C567719017A3400E382F1 /* TGRDataSourceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TGRDataSourceTests-Info.plist"; sourceTree = "<group>"; };
+		990C567919017A3400E382F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		990C567B19017A3400E382F1 /* TGRDataSourceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGRDataSourceTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		990C565919017A3400E382F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				990C566019017A3400E382F1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		990C566919017A3400E382F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				990C567419017A3400E382F1 /* libTGRDataSource.a in Frameworks */,
+				990C566E19017A3400E382F1 /* XCTest.framework in Frameworks */,
+				990C567119017A3400E382F1 /* UIKit.framework in Frameworks */,
+				990C566F19017A3400E382F1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		990C565319017A3400E382F1 = {
+			isa = PBXGroup;
+			children = (
+				990C566119017A3400E382F1 /* TGRDataSource */,
+				990C567519017A3400E382F1 /* TGRDataSourceTests */,
+				990C565E19017A3400E382F1 /* Frameworks */,
+				990C565D19017A3400E382F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		990C565D19017A3400E382F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				990C565C19017A3400E382F1 /* libTGRDataSource.a */,
+				990C566C19017A3400E382F1 /* TGRDataSourceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		990C565E19017A3400E382F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				990C565F19017A3400E382F1 /* Foundation.framework */,
+				990C566D19017A3400E382F1 /* XCTest.framework */,
+				990C567019017A3400E382F1 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		990C566119017A3400E382F1 /* TGRDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				990C566419017A3400E382F1 /* TGRDataSource.h */,
+				990C566619017A3400E382F1 /* TGRDataSource.m */,
+				990C566219017A3400E382F1 /* Supporting Files */,
+			);
+			path = TGRDataSource;
+			sourceTree = "<group>";
+		};
+		990C566219017A3400E382F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				990C566319017A3400E382F1 /* TGRDataSource-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		990C567519017A3400E382F1 /* TGRDataSourceTests */ = {
+			isa = PBXGroup;
+			children = (
+				990C567B19017A3400E382F1 /* TGRDataSourceTests.m */,
+				990C567619017A3400E382F1 /* Supporting Files */,
+			);
+			path = TGRDataSourceTests;
+			sourceTree = "<group>";
+		};
+		990C567619017A3400E382F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				990C567719017A3400E382F1 /* TGRDataSourceTests-Info.plist */,
+				990C567819017A3400E382F1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		990C565B19017A3400E382F1 /* TGRDataSource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 990C567F19017A3400E382F1 /* Build configuration list for PBXNativeTarget "TGRDataSource" */;
+			buildPhases = (
+				990C565819017A3400E382F1 /* Sources */,
+				990C565919017A3400E382F1 /* Frameworks */,
+				990C565A19017A3400E382F1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TGRDataSource;
+			productName = TGRDataSource;
+			productReference = 990C565C19017A3400E382F1 /* libTGRDataSource.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		990C566B19017A3400E382F1 /* TGRDataSourceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 990C568219017A3400E382F1 /* Build configuration list for PBXNativeTarget "TGRDataSourceTests" */;
+			buildPhases = (
+				990C566819017A3400E382F1 /* Sources */,
+				990C566919017A3400E382F1 /* Frameworks */,
+				990C566A19017A3400E382F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				990C567319017A3400E382F1 /* PBXTargetDependency */,
+			);
+			name = TGRDataSourceTests;
+			productName = TGRDataSourceTests;
+			productReference = 990C566C19017A3400E382F1 /* TGRDataSourceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		990C565419017A3400E382F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Guillermo Gonzalez";
+			};
+			buildConfigurationList = 990C565719017A3400E382F1 /* Build configuration list for PBXProject "TGRDataSource" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 990C565319017A3400E382F1;
+			productRefGroup = 990C565D19017A3400E382F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				990C565B19017A3400E382F1 /* TGRDataSource */,
+				990C566B19017A3400E382F1 /* TGRDataSourceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		990C566A19017A3400E382F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				990C567A19017A3400E382F1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		990C565819017A3400E382F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				990C566719017A3400E382F1 /* TGRDataSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		990C566819017A3400E382F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				990C567C19017A3400E382F1 /* TGRDataSourceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		990C567319017A3400E382F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 990C565B19017A3400E382F1 /* TGRDataSource */;
+			targetProxy = 990C567219017A3400E382F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		990C567819017A3400E382F1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				990C567919017A3400E382F1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		990C567D19017A3400E382F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		990C567E19017A3400E382F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		990C568019017A3400E382F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/TGRDataSource.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TGRDataSource/TGRDataSource-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		990C568119017A3400E382F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/TGRDataSource.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TGRDataSource/TGRDataSource-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		990C568319017A3400E382F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TGRDataSource/TGRDataSource-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TGRDataSourceTests/TGRDataSourceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		990C568419017A3400E382F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TGRDataSource/TGRDataSource-Prefix.pch";
+				INFOPLIST_FILE = "TGRDataSourceTests/TGRDataSourceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		990C565719017A3400E382F1 /* Build configuration list for PBXProject "TGRDataSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				990C567D19017A3400E382F1 /* Debug */,
+				990C567E19017A3400E382F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		990C567F19017A3400E382F1 /* Build configuration list for PBXNativeTarget "TGRDataSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				990C568019017A3400E382F1 /* Debug */,
+				990C568119017A3400E382F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		990C568219017A3400E382F1 /* Build configuration list for PBXNativeTarget "TGRDataSourceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				990C568319017A3400E382F1 /* Debug */,
+				990C568419017A3400E382F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 990C565419017A3400E382F1 /* Project object */;
+}
