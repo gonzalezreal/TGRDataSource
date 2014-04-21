@@ -134,8 +134,8 @@
         [self.tableView beginUpdates];
         [self.tableView deleteSections:self.deletedSections withRowAnimation:UITableViewRowAnimationAutomatic];
         [self.tableView insertSections:self.insertedSections withRowAnimation:UITableViewRowAnimationAutomatic];
-        [self.tableView deleteRowsAtIndexPaths:self.deletedRows withRowAnimation:UITableViewRowAnimationLeft];
-        [self.tableView insertRowsAtIndexPaths:self.insertedRows withRowAnimation:UITableViewRowAnimationRight];
+        [self.tableView deleteRowsAtIndexPaths:self.deletedRows withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView insertRowsAtIndexPaths:self.insertedRows withRowAnimation:UITableViewRowAnimationAutomatic];
         [self.tableView reloadRowsAtIndexPaths:self.updatedRows withRowAnimation:UITableViewRowAnimationAutomatic];
         [self.tableView endUpdates];
     }
