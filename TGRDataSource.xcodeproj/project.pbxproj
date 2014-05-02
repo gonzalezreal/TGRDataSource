@@ -17,6 +17,7 @@
 		990C568719017CB400E382F1 /* TGRDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C568619017CB400E382F1 /* TGRDataSource.m */; };
 		990C568A19017DAD00E382F1 /* NSObject+Abstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C568919017DAD00E382F1 /* NSObject+Abstract.m */; };
 		990C568D19017EBA00E382F1 /* TGRArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C568C19017EBA00E382F1 /* TGRArrayDataSource.m */; };
+		9929008419143212003D0087 /* TGRFetchedResultsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9929008319143212003D0087 /* TGRFetchedResultsCollectionViewController.m */; };
 		993DB7E71901990000653166 /* TGRFetchedResultsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 993DB7E61901990000653166 /* TGRFetchedResultsDataSource.m */; };
 		993DB7EA1901B86300653166 /* TGRFetchedResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993DB7E91901B86300653166 /* TGRFetchedResultsTableViewController.m */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,8 @@
 		990C568919017DAD00E382F1 /* NSObject+Abstract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Abstract.m"; sourceTree = "<group>"; };
 		990C568B19017EBA00E382F1 /* TGRArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRArrayDataSource.h; sourceTree = "<group>"; };
 		990C568C19017EBA00E382F1 /* TGRArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRArrayDataSource.m; sourceTree = "<group>"; };
+		9929008219143212003D0087 /* TGRFetchedResultsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRFetchedResultsCollectionViewController.h; sourceTree = "<group>"; };
+		9929008319143212003D0087 /* TGRFetchedResultsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRFetchedResultsCollectionViewController.m; sourceTree = "<group>"; };
 		993DB7E51901990000653166 /* TGRFetchedResultsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRFetchedResultsDataSource.h; sourceTree = "<group>"; };
 		993DB7E61901990000653166 /* TGRFetchedResultsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRFetchedResultsDataSource.m; sourceTree = "<group>"; };
 		993DB7E81901B86300653166 /* TGRFetchedResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRFetchedResultsTableViewController.h; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 				993DB7E61901990000653166 /* TGRFetchedResultsDataSource.m */,
 				993DB7E81901B86300653166 /* TGRFetchedResultsTableViewController.h */,
 				993DB7E91901B86300653166 /* TGRFetchedResultsTableViewController.m */,
+				9929008219143212003D0087 /* TGRFetchedResultsCollectionViewController.h */,
+				9929008319143212003D0087 /* TGRFetchedResultsCollectionViewController.m */,
 			);
 			path = TGRDataSource;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				990C568719017CB400E382F1 /* TGRDataSource.m in Sources */,
 				993DB7EA1901B86300653166 /* TGRFetchedResultsTableViewController.m in Sources */,
 				993DB7E71901990000653166 /* TGRFetchedResultsDataSource.m in Sources */,
+				9929008419143212003D0087 /* TGRFetchedResultsCollectionViewController.m in Sources */,
 				990C568A19017DAD00E382F1 /* NSObject+Abstract.m in Sources */,
 				990C568D19017EBA00E382F1 /* TGRArrayDataSource.m in Sources */,
 			);
