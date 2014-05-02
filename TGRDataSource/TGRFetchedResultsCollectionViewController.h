@@ -25,7 +25,9 @@
 
 @class TGRFetchedResultsDataSource;
 
-@interface TGRFetchedResultsCollectionViewController : UICollectionViewController <NSFetchedResultsControllerDelegate>
+@interface TGRFetchedResultsCollectionViewController : UIViewController <UICollectionViewDelegate, NSFetchedResultsControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 /**
  The data source used by this view controller.
