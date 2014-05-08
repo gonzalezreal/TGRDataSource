@@ -31,6 +31,16 @@ typedef void (^TGRDataSourceCellBlock)(id cell, id item);
 @interface TGRDataSource : NSObject <UITableViewDataSource, UICollectionViewDataSource>
 
 /**
+ The cell reuse identifier.
+ */
+@property (copy, nonatomic, readonly) NSString *cellReuseIdentifier;
+
+/**
+ A block that will be called when the view asks for a cell in a particular location.
+ */
+@property (copy, nonatomic, readonly) TGRDataSourceCellBlock configureCellBlock;
+
+/**
  Initializes the data source.
  
  @param reuseIdentifier The cell reuse identifier.
