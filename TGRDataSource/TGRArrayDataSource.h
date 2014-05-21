@@ -46,14 +46,18 @@ cellReuseIdentifier:(NSString *)reuseIdentifier
  configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock;
 
 /**
- Initializes the data source without a default cell reuse identifier.
+ Initializes the data source with a custom cell reuse identifier block.
  
  @param items The items managed by the data source.
- @param configureCellBlock A block that will be called when the view asks for a cell in a particular location.
+ @param reuseIdentifierBlock A block that will be called when the view asks for
+ the reuse identifier of cell in a particular location.
+ @param configureCellBlock A block that will be called when the view asks for a 
+ cell in a particular location.
  
  @return An initialized data source.
  */
-- (id)initWithItems:(NSArray *)items
- configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock;
+-  (id)initWithItems:(NSArray *)items
+reuseIdentifierBlock:(TGRDataSourceReuseIdentifierBlock)reuseIdentifierBlock
+  configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock;
 
 @end

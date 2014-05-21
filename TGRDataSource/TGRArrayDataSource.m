@@ -28,7 +28,8 @@
 cellReuseIdentifier:(NSString *)reuseIdentifier
  configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock
 {
-    self = [super initWithCellReuseIdentifier:reuseIdentifier configureCellBlock:configureCellBlock];
+    self = [super initWithCellReuseIdentifier:reuseIdentifier
+                           configureCellBlock:configureCellBlock];
     
     if (self) {
         _items = [items copy];
@@ -37,12 +38,16 @@ cellReuseIdentifier:(NSString *)reuseIdentifier
     return self;
 }
 
-- (id)initWithItems:(NSArray *)items
- configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock
+-  (id)initWithItems:(NSArray *)items
+reuseIdentifierBlock:(TGRDataSourceReuseIdentifierBlock)reuseIdentifierBlock
+  configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock
 {
-    self = [self initWithItems:items
-           cellReuseIdentifier:nil
-            configureCellBlock:configureCellBlock];
+    self = [super initWithReuseIdentifierBlock:reuseIdentifierBlock
+                            configureCellBlock:configureCellBlock];
+    
+    if (self) {
+        _items = [items copy];
+    }
     
     return self;
 }

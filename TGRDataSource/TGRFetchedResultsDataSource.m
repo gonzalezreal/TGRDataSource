@@ -38,11 +38,15 @@
 }
 
 - (id)initWithFetchedResultsController:(NSFetchedResultsController *)controller
+                  reuseIdentifierBlock:(TGRDataSourceReuseIdentifierBlock)reuseIdentifierBlock
                     configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock
 {
-    self = [self initWithFetchedResultsController:controller
-                              cellReuseIdentifier:nil
-                               configureCellBlock:configureCellBlock];
+    self = [super initWithReuseIdentifierBlock:reuseIdentifierBlock
+                            configureCellBlock:configureCellBlock];
+    
+    if (self) {
+        _fetchedResultsController = controller;
+    }
     
     return self;
 }

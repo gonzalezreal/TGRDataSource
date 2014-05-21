@@ -26,6 +26,7 @@
 @interface TGRDataSource ()
 
 @property (copy, nonatomic) NSString *cellReuseIdentifier;
+@property (copy, nonatomic) TGRDataSourceReuseIdentifierBlock reuseIdentifierBlock;
 @property (copy, nonatomic) TGRDataSourceCellBlock configureCellBlock;
 
 @end
@@ -45,16 +46,17 @@
     return self;
 }
 
-- (id)initWithConfigureCellBlock:(TGRDataSourceCellBlock)configureCellBlock {
+- (id)initWithReuseIdentifierBlock:(TGRDataSourceReuseIdentifierBlock)reuseIdentifierBlock
+                configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock {
+    
     self = [self initWithCellReuseIdentifier:nil
                           configureCellBlock:configureCellBlock];
     
+    if (self) {
+        self.reuseIdentifierBlock = reuseIdentifierBlock;
+    }
+    
     return self;
-}
-
-- (NSString *)reuseIdentifierForCellAtIndexPath:(NSIndexPath *)indexPath {
-    [self subclassResponsibility:_cmd];
-    return nil;
 }
 
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath {
@@ -77,14 +79,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    id item = [self itemAtIndexPath:indexPath];
+    
     NSString *reuseIdentifier = self.cellReuseIdentifier;
-    if (!reuseIdentifier) {
-        reuseIdentifier = [self reuseIdentifierForCellAtIndexPath:indexPath];
+    if (!reuseIdentifier && self.reuseIdentifierBlock) {
+        reuseIdentifier = self.reuseIdentifierBlock(indexPath, item);
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier
                                                             forIndexPath:indexPath];
-    id item = [self itemAtIndexPath:indexPath];
     
     if (self.configureCellBlock) {
         self.configureCellBlock(cell, item);
@@ -105,14 +108,15 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    id item = [self itemAtIndexPath:indexPath];
+    
     NSString *reuseIdentifier = self.cellReuseIdentifier;
-    if (!reuseIdentifier) {
-        reuseIdentifier = [self reuseIdentifierForCellAtIndexPath:indexPath];
+    if (!reuseIdentifier && self.reuseIdentifierBlock) {
+        reuseIdentifier = self.reuseIdentifierBlock(indexPath, item);
     }
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier
                                                                            forIndexPath:indexPath];
-    id item = [self itemAtIndexPath:indexPath];
     
     if (self.configureCellBlock) {
         self.configureCellBlock(cell, item);

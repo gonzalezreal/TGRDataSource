@@ -39,7 +39,8 @@
  
  @param controller The `NSFetchedResultsController` object managed by this data source.
  @param reuseIdentifier The cell reuse identifier.
- @param configureCellBlock A block that will be called when the view asks for a cell in a particular location.
+ @param configureCellBlock A block that will be called when the view asks for a cell in 
+ a particular location.
  
  @return An initialized data source.
  */
@@ -51,11 +52,15 @@
  Initializes the data source without a default cell reuse identifier.
  
  @param controller The `NSFetchedResultsController` object managed by this data source.
- @param configureCellBlock A block that will be called when the view asks for a cell in a particular location.
+ @param reuseIdentifierBlock A block that will be called when the view asks for
+ the reuse identifier of cell in a particular location.
+ @param configureCellBlock A block that will be called when the view asks for a cell in 
+ a particular location.
  
  @return An initialized data source.
  */
 - (id)initWithFetchedResultsController:(NSFetchedResultsController *)controller
+                  reuseIdentifierBlock:(TGRDataSourceReuseIdentifierBlock)reuseIdentifierBlock
                     configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock;
 
 @end
