@@ -33,8 +33,8 @@
 @implementation TGRDataSource
 
 - (id)initWithCellReuseIdentifier:(NSString *)reuseIdentifier
-               configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock
-{
+               configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock {
+
     self = [super init];
     
     if (self) {
@@ -43,6 +43,18 @@
     }
     
     return self;
+}
+
+- (id)initWithConfigureCellBlock:(TGRDataSourceCellBlock)configureCellBlock {
+    self = [self initWithCellReuseIdentifier:nil
+                          configureCellBlock:configureCellBlock];
+    
+    return self;
+}
+
+- (NSString *)reuseIdentifierForCellAtIndexPath:(NSIndexPath *)indexPath {
+    [self subclassResponsibility:_cmd];
+    return nil;
 }
 
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath {
@@ -62,8 +74,15 @@
     return 0;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellReuseIdentifier
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *reuseIdentifier = self.cellReuseIdentifier;
+    if (!reuseIdentifier) {
+        reuseIdentifier = [self reuseIdentifierForCellAtIndexPath:indexPath];
+    }
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier
                                                             forIndexPath:indexPath];
     id item = [self itemAtIndexPath:indexPath];
     
@@ -86,7 +105,12 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:self.cellReuseIdentifier
+    NSString *reuseIdentifier = self.cellReuseIdentifier;
+    if (!reuseIdentifier) {
+        reuseIdentifier = [self reuseIdentifierForCellAtIndexPath:indexPath];
+    }
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier
                                                                            forIndexPath:indexPath];
     id item = [self itemAtIndexPath:indexPath];
     

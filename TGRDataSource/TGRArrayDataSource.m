@@ -37,6 +37,16 @@ cellReuseIdentifier:(NSString *)reuseIdentifier
     return self;
 }
 
+- (id)initWithItems:(NSArray *)items
+ configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock
+{
+    self = [self initWithItems:items
+           cellReuseIdentifier:nil
+            configureCellBlock:configureCellBlock];
+    
+    return self;
+}
+
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath {
     return self.items[(NSUInteger)indexPath.row];
 }

@@ -31,7 +31,7 @@ typedef void (^TGRDataSourceCellBlock)(id cell, id item);
 @interface TGRDataSource : NSObject <UITableViewDataSource, UICollectionViewDataSource>
 
 /**
- The cell reuse identifier.
+ The default cell reuse identifier.
  */
 @property (copy, nonatomic, readonly) NSString *cellReuseIdentifier;
 
@@ -43,13 +43,48 @@ typedef void (^TGRDataSourceCellBlock)(id cell, id item);
 /**
  Initializes the data source.
  
- @param reuseIdentifier The cell reuse identifier.
- @param configureCellBlock A block that will be called when the view asks for a cell in a particular location.
+ @discussion This initializer considers the implementation of a data source that 
+ provides homogeneous cells, which means that all cells are dequeued using the 
+ default reuse identifier.
+ 
+ @param reuseIdentifier The default cell reuse identifier.
+ @param configureCellBlock A block that will be called when the view asks for a 
+ cell in a particular location.
  
  @return An initialized data source.
  */
 - (id)initWithCellReuseIdentifier:(NSString *)reuseIdentifier
                configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock;
+
+/**
+ Initializes the data source without a default cell reuse identifier.
+ 
+ @discussion This initializer considers the implementation of a table view or
+ collection view data source that provides heterogeneous cells. This implies 
+ that the `cellReuseIdentifier` property will be ignored and the method 
+ `reuseIdentifierForCellAtIndexPath:` must be overriden.
+ 
+ @param configureCellBlock A block that will be called when the view asks for a
+ cell in a particular location.
+ 
+ @return An initialized data source.
+ */
+- (id)initWithConfigureCellBlock:(TGRDataSourceCellBlock)configureCellBlock;
+
+/**
+ Returns a reuse identifier used to dequeue a cell that will be placed
+ on a given location.
+ 
+ @discussion The default implementation of this method simply returns
+ the value of the `cellReuseIdentifier` property. Overriding this method allows
+ a subclass to use multiple reuse identifiers, which allows the creation
+ of table views and collection views composed by heterogeneous cell types.
+ 
+ @param indexPath The index path specifying the location of the cell.
+ 
+ @return A reuse identifier specific for that cell
+ */
+- (NSString *)reuseIdentifierForCellAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
  Returns a data source item in a particular location.

@@ -37,6 +37,16 @@
     return self;
 }
 
+- (id)initWithFetchedResultsController:(NSFetchedResultsController *)controller
+                    configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock
+{
+    self = [self initWithFetchedResultsController:controller
+                              cellReuseIdentifier:nil
+                               configureCellBlock:configureCellBlock];
+    
+    return self;
+}
+
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath {
     return [self.fetchedResultsController objectAtIndexPath:indexPath];
 }
