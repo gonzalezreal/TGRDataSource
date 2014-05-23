@@ -25,7 +25,6 @@
 
 @interface TGRDataSource ()
 
-@property (copy, nonatomic) NSString *cellReuseIdentifier;
 @property (copy, nonatomic) TGRDataSourceReuseIdentifierBlock reuseIdentifierBlock;
 @property (copy, nonatomic) TGRDataSourceCellBlock configureCellBlock;
 
@@ -33,15 +32,15 @@
 
 @implementation TGRDataSource
 
-- (id)initWithCellReuseIdentifier:(NSString *)reuseIdentifier
+- (id)initWithCellReuseIdentifier:(NSString *)defaultReuseIdentifier
                configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock {
-
-    self = [super init];
     
-    if (self) {
-        self.cellReuseIdentifier = reuseIdentifier;
-        self.configureCellBlock = configureCellBlock;
-    }
+    TGRDataSourceReuseIdentifierBlock defaultBlock = ^NSString *(NSIndexPath *indexPath, id item) {
+        return defaultReuseIdentifier;
+    };
+    
+    self = [self initWithReuseIdentifierBlock:defaultBlock
+                           configureCellBlock:configureCellBlock];
     
     return self;
 }
@@ -49,9 +48,7 @@
 - (id)initWithReuseIdentifierBlock:(TGRDataSourceReuseIdentifierBlock)reuseIdentifierBlock
                 configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock {
     
-    self = [self initWithCellReuseIdentifier:nil
-                          configureCellBlock:configureCellBlock];
-    
+    self = [super init];
     if (self) {
         self.reuseIdentifierBlock = reuseIdentifierBlock;
     }
@@ -81,8 +78,8 @@
 {
     id item = [self itemAtIndexPath:indexPath];
     
-    NSString *reuseIdentifier = self.cellReuseIdentifier;
-    if (!reuseIdentifier && self.reuseIdentifierBlock) {
+    NSString *reuseIdentifier = @"";
+    if (self.reuseIdentifierBlock) {
         reuseIdentifier = self.reuseIdentifierBlock(indexPath, item);
     }
     
@@ -110,8 +107,8 @@
 {
     id item = [self itemAtIndexPath:indexPath];
     
-    NSString *reuseIdentifier = self.cellReuseIdentifier;
-    if (!reuseIdentifier && self.reuseIdentifierBlock) {
+    NSString *reuseIdentifier = @"";
+    if (self.reuseIdentifierBlock) {
         reuseIdentifier = self.reuseIdentifierBlock(indexPath, item);
     }
     

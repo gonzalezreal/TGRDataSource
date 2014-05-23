@@ -32,11 +32,6 @@ typedef void (^TGRDataSourceCellBlock)(id cell, id item);
 @interface TGRDataSource : NSObject <UITableViewDataSource, UICollectionViewDataSource>
 
 /**
- The default cell reuse identifier.
- */
-@property (copy, nonatomic, readonly) NSString *cellReuseIdentifier;
-
-/**
  A block that will be called when the view asks for the reuse identifier of cell in a 
  particular location.
  */
@@ -48,29 +43,27 @@ typedef void (^TGRDataSourceCellBlock)(id cell, id item);
 @property (copy, nonatomic, readonly) TGRDataSourceCellBlock configureCellBlock;
 
 /**
- Initializes the data source.
+ Initializes the data source using a single reuse identifier. 
  
- @discussion This initializer considers the implementation of a data source that 
- provides homogeneous cells, which means that all cells are dequeued using the 
- default reuse identifier.
+ @discussion This initializer internally creates a custom reuse identifier block 
+ that will return the default reuse identifier for all cells. This is useful
+ when a data source provide a single kind of cell, for homogeneous views.
  
- @param reuseIdentifier The default cell reuse identifier.
+ @param defaultReuseIdentifier The default cell reuse identifier.
  @param configureCellBlock A block that will be called when the view asks for a 
  cell in a particular location.
  
  @return An initialized data source.
  */
-- (id)initWithCellReuseIdentifier:(NSString *)reuseIdentifier
+- (id)initWithCellReuseIdentifier:(NSString *)defaultReuseIdentifier
                configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock;
 
 /**
  Initializes the data source with a custom cell reuse identifier block.
  
- @discussion This initializer considers the implementation of a table view or
- collection view data source that provides heterogeneous cells. This implies 
- that the `cellReuseIdentifier` property will be ignored and the block
- `reuseIdentifierBlock` will be used in it's place to determine the cell reuse
- identifier .
+ @discussion This is the designated initializer of this class. It creates
+ a data source that provides multiple kinds of cell that can be used in
+ the implementation of heterogeneous views.
  
  @param reuseIdentifierBlock A block that will be called when the view asks for
  the reuse identifier of cell in a particular location.
