@@ -37,6 +37,20 @@
     return self;
 }
 
+- (id)initWithFetchedResultsController:(NSFetchedResultsController *)controller
+                  reuseIdentifierBlock:(TGRDataSourceReuseIdentifierBlock)reuseIdentifierBlock
+                    configureCellBlock:(TGRDataSourceCellBlock)configureCellBlock
+{
+    self = [super initWithReuseIdentifierBlock:reuseIdentifierBlock
+                            configureCellBlock:configureCellBlock];
+    
+    if (self) {
+        _fetchedResultsController = controller;
+    }
+    
+    return self;
+}
+
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath {
     return [self.fetchedResultsController objectAtIndexPath:indexPath];
 }
