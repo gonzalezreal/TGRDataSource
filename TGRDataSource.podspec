@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TGRDataSource"
-  s.version      = "0.1"
+  s.version      = "0.2"
   s.summary      = "Convenience UITableView and UICollectionView data sources."
 
   s.description  = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "https://twitter.com/gonzalezreal"
   
   s.platform     = :ios, "6.0"
-  s.source       = { :git => "https://github.com/gonzalezreal/TGRDataSource.git", :tag => "0.1" }
+  s.source       = { :git => "https://github.com/gonzalezreal/TGRDataSource.git", :tag => "0.2" }
   s.source_files  = "TGRDataSource"
   
   s.frameworks = "Foundation", "UIKit", "CoreData"
