@@ -24,11 +24,32 @@
 
 typedef void (^TGRDataSourceCellBlock)(id cell, id item);
 
+@class TGRDataSource;
+@protocol TGRDataSourceDelegate <NSObject>
+
+@optional
+/**
+ *  Gets reuse identifier for cell when cellReuseIdentifier property is nil.
+ *
+ *  @param dataSource The current data source
+ *  @param item       The data source item
+ *
+ *  @return The reuse identifier for data source item
+ */
+- (NSString *)dataSource:(TGRDataSource *)dataSource reuseIdentifierForItem:(id)item;
+
+@end
+
 /**
  Convenience class to encapsulate an `UITableView` or `UICollectionView` data source. 
  Inspired by http://www.objc.io/issue-1/lighter-view-controllers.html
  */
 @interface TGRDataSource : NSObject <UITableViewDataSource, UICollectionViewDataSource>
+
+/**
+ *  The data source delegate
+ */
+@property (weak, nonatomic) id<TGRDataSourceDelegate>delegate;
 
 /**
  The cell reuse identifier.
